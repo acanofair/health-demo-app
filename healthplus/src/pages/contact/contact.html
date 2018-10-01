@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only >
+        <ion-icon name='home'></ion-icon>
+      </button>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<style>  h4 {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}</style>
+
+<ion-content>
+   
+  <ion-list>
+
+      <h5>Brightness</h5>
+      <ion-item>
+           <ion-range [(ngModel)]="brightness" color= "primary" pin="true">
+            <ion-icon range-left small name="sunny"></ion-icon>
+            <ion-icon range-right name="sunny"></ion-icon>
+          </ion-range>
+        </ion-item>
+
+    
+
+        <ion-item>
+            <ion-label>Night Mode</ion-label>
+            <ion-toggle [(ngModel)]="night-mode" disabled="false"></ion-toggle>
+          </ion-item>
+
+
+
+      <div padding>
+        <button ion-button color = danger block (click)= "showAlert()">LOGOUT</button>
+      </div>
+
+
+  </ion-list>
+</ion-content>
+
+

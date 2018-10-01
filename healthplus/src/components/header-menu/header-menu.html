@@ -1,0 +1,18 @@
+<!-- Generated template for the HeaderMenuComponent component -->
+<div>
+    <ion-list>
+      <ion-list-header>
+        Sidebar
+      </ion-list-header>
+     <!-- <ion-item (click)="logoutClicked()">Logout</ion-item> -->
+     <ion-item>
+        <ion-label>Night Mode</ion-label>
+        <ion-toggle [(ngModel)]="night-mode" disabled="false"></ion-toggle>
+      </ion-item>
+
+     
+      <button ion-button color = danger block (click)= "showAlert()">LOGOUT</button>
+
+     
+    </ion-list>
+  </div>
