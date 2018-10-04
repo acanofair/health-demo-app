@@ -10,6 +10,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WorkoutsPage } from '../pages/workouts/workouts';
 import { AbWorkoutsPage } from '../pages/ab-workouts/ab-workouts';
+import { PersonalinfoPage } from '../pages/personalinfo/personalinfo';
+import { LegWorkoutsPage } from '../pages/leg-workouts/leg-workouts';
+import { ArmWorkoutsPage } from '../pages/arm-workouts/arm-workouts';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WorkoutsPage,
     AbWorkoutsPage,
     TabsPage,
+    PersonalinfoPage,
+    LegWorkoutsPage,
     HeaderMenuComponent
   ],
   imports: [
@@ -38,6 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     WorkoutsPage,
     AbWorkoutsPage,
+    PersonalinfoPage,
+    LegWorkoutsPage,
     TabsPage
   ],
   providers: [
