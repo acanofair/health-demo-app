@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>About</ion-title>
+    <ion-title>Diet</ion-title>
     
     <ion-buttons>
       
@@ -18,5 +18,24 @@
 
 
 <ion-content padding>
-  
+	<ion-label>
+	<!-- 	{{currentDate}} -->
+	</ion-label>
+		<ion-label>
+		{{formattedDate}}
+	</ion-label>
+  <h1>
+  	<ion-item>
+  		<ion-label>Meal</ion-label>
+  		<ion-select [(ngModel)] ="meal">
+  			<ion-option value = "b">Breakfast</ion-option>
+  			<ion-option value = "l">Lunch</ion-option>
+  			<ion-option value = "d">Dinner</ion-option>
+  			<ion-option value = "o">Other(Snack)</ion-option>
+  		</ion-select>
+  	</ion-item>
+  </h1>
+  <h2>
+  	
+  </h2>
 </ion-content>

@@ -8,7 +8,9 @@ import { NavController, AlertController } from 'ionic-angular';
 })
 export class HomePage {
 
+
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+
 
   }
 
@@ -21,4 +23,9 @@ export class HomePage {
     });
     alert.present();
   }
+
+
+  
+
+
 }

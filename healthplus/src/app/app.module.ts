@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WorkoutsPage } from '../pages/workouts/workouts';
 import { AbWorkoutsPage } from '../pages/ab-workouts/ab-workouts';
+import {CalendarModule} from 'ionic3-calendar-en';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,7 +29,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    CalendarModule,
     IonicModule.forRoot(MyApp)
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
