@@ -1,18 +1,16 @@
 <ion-header>
-
     <ion-navbar>
       <ion-buttons start menuToggle> 
         <button ion-button>
           <ion-icon name="menu"></ion-icon>
         </button>
       </ion-buttons>
-    
+
       <ion-title class ="logo">
         <img alt = "logo" height= "40" src = "assets/imgs/healthplusblue.png">
-      </ion-title>
-      
+      </ion-title>     
+
     </ion-navbar>
-  
   </ion-header>
 
   
@@ -21,9 +19,7 @@
 
 <ion-content>
   <h4 text-center> LOGIN </h4>
- <!-- <button ion-button full icon-left (click)="toggleAppTheme()">
-      <ion-icon  name="bulb"></ion-icon>Toggle Theme
-    </button> -->
+ 
   <ion-list>
 
     <ion-item>
@@ -42,5 +38,11 @@
       <button ion-button block (click)= "showAlert()">LOGIN</button>
     </div>
   
+    <h1>
+        <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
+      </h1>
+      <h2>
+        <button ion-button (click)="calendar.today()">Jump to Today</button>
+      </h2>
 
 </ion-content>

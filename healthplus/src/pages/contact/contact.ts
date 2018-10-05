@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController, NavParams} from 'ionic-angular';
 import { PersonalinfoPage } from '../personalinfo/personalinfo';
-import { AboutPage } from '../about/about';
+import { AboutInfoPage } from '../about-info/about-info';
 import { HomePage } from '../home/home';
 import { SettingsProvider } from './../../providers/settings/settings';
 
@@ -39,8 +39,8 @@ export class ContactPage {
   openPersonalinfoPage(){
     this.navCtrl.push(PersonalinfoPage)
  }
- openaboutPage(){
-    this.navCtrl.push(AboutPage)
+ openaboutinfoPage(){
+    this.navCtrl.push(AboutInfoPage)
   }
   openHomePage(){
     this.navCtrl.push(HomePage)

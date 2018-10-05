@@ -1,22 +1,47 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>About</ion-title>
+    <ion-title>
+      <div logo-center>
+        <img alt = "logo" height="40" src="assets/imgs/healthplusblue.png">
+      </div>
+    </ion-title>
     
     <ion-buttons>
       
      <button right ion-button icon-only menuToggle>
         <ion-icon name='menu'></ion-icon>
       </button>
-
-
     </ion-buttons>
-
   </ion-navbar>
 </ion-header>
 
-
-
-
 <ion-content padding>
-  
+    <ion-label>
+        {{formattedDate}}
+      </ion-label>
+      <h1>
+        <ion-item>
+          <ion-label>Meal</ion-label>
+          <ion-select [(ngModel)] ="meal">
+            <ion-option value = "b">Breakfast</ion-option>
+            <ion-option value = "l">Lunch</ion-option>
+            <ion-option value = "d">Dinner</ion-option>
+            <ion-option value = "o">Other(Snack)</ion-option>
+          </ion-select>
+        </ion-item>
+      </h1>
+      <h2>
+         <ion-item>
+        <ion-label color="primary" stacked>Meal Items</ion-label>
+        <ion-input type="text" placeholder="Enter contents of meal"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label color="primary" stacked>Total Calories</ion-label>
+        <ion-input type="number" placeholder="Calorie Input"></ion-input>
+      </ion-item>
+    
+        <button ion-button (click)= "showAlert()">Submit Meal</button>
+      </h2>
+
 </ion-content>

@@ -13,6 +13,8 @@ import { AbWorkoutsPage } from '../pages/ab-workouts/ab-workouts';
 import { PersonalinfoPage } from '../pages/personalinfo/personalinfo';
 import { LegWorkoutsPage } from '../pages/leg-workouts/leg-workouts';
 import { ArmWorkoutsPage } from '../pages/arm-workouts/arm-workouts';
+import { AboutInfoPage } from '../pages/about-info/about-info';
+import { CalendarModule } from 'ionic3-calendar-en';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -31,10 +33,12 @@ import { SettingsProvider } from '../providers/settings/settings';
     PersonalinfoPage,
     LegWorkoutsPage,
     ArmWorkoutsPage,
+    AboutInfoPage,
     HeaderMenuComponent
   ],
   imports: [
     BrowserModule,
+    CalendarModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -48,6 +52,7 @@ import { SettingsProvider } from '../providers/settings/settings';
     PersonalinfoPage,
     LegWorkoutsPage,
     ArmWorkoutsPage,
+    AboutInfoPage,
     TabsPage
   ],
   providers: [
