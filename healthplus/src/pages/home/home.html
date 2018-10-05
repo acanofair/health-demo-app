@@ -6,9 +6,11 @@
           <ion-icon name="menu"></ion-icon>
         </button>
       </ion-buttons>
+
+      <!-- <ion-content padding class = "myphoto"> -->
     
-      <ion-title>
-        Home
+      <ion-title class ="logo">
+        <img alt = "logo" height="40" src ="assets/imgs/healthplusblue.png">
       </ion-title>
       
     </ion-navbar>
@@ -38,8 +40,11 @@
   <button ion-button block (click)= "showAlert()">LOGIN</button>
 
   <h1>
-   <!--  <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar> -->
+    <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
   </h1>
+  <h2>
+    <button ion-button (click)="calendar.today()">Jump to Today</button>
+  </h2>
 
 
 </ion-content>

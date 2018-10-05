@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, NavParams} from 'ionic-angular';
+import { PersonalinfoPage } from '../personalinfo/personalinfo';
+
+
 
 @Component({
   selector: 'page-contact',
@@ -7,7 +10,7 @@ import { NavController, AlertController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public navParams: NavParams) {
 
   }
 
@@ -18,5 +21,9 @@ export class ContactPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  openPersonalinfoPage(){
+    this.navCtrl.push(PersonalinfoPage)
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',
@@ -9,7 +9,7 @@ export class AboutPage {
 	currentDate;
 	formattedDate;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController) {
   		this.currentDate = new Date();
   		this.getFormattedDate()
   }
@@ -23,6 +23,15 @@ export class AboutPage {
   	var date = dateObj.getDate()
 
   	this.formattedDate = month +'-' +date +'-'+year;
+  }
+
+    showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Meal Submitted',
+      subTitle: 'When working properly this information will be stored in the database and displayed on the calendar for this day and meal',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 }

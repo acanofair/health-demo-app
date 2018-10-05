@@ -1,6 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Diet</ion-title>
+    <ion-title>
+      <div logo-center>
+      <img alt = "logo" height="40" src ="assets/imgs/healthplusblue.png">
+      </div>
+    </ion-title>
     
     <ion-buttons>
       
@@ -18,9 +22,6 @@
 
 
 <ion-content padding>
-	<ion-label>
-	<!-- 	{{currentDate}} -->
-	</ion-label>
 		<ion-label>
 		{{formattedDate}}
 	</ion-label>
@@ -36,6 +37,16 @@
   	</ion-item>
   </h1>
   <h2>
-  	
+     <ion-item>
+    <ion-label color="primary" stacked>Meal Items</ion-label>
+    <ion-input type="text" placeholder="Enter contents of meal"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Total Calories</ion-label>
+    <ion-input type="number" placeholder="Calorie Input"></ion-input>
+  </ion-item>
+
+    <button ion-button (click)= "showAlert()">Submit Meal</button>
   </h2>
 </ion-content>

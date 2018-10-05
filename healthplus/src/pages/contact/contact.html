@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Settings
+     <ion-title class ="logo">
+      <img alt = "logo" height="40" src ="assets/imgs/healthplusblue.png">
     </ion-title>
     <ion-buttons right>
       <button ion-button icon-only >
@@ -20,8 +20,6 @@
 <ion-content>
    
   <ion-list>
-
-      <h5>Brightness</h5>
       <ion-item>
            <ion-range [(ngModel)]="brightness" color= "primary" pin="true">
             <ion-icon range-left small name="sunny"></ion-icon>
@@ -36,9 +34,13 @@
             <ion-toggle [(ngModel)]="night-mode" disabled="false"></ion-toggle>
           </ion-item>
 
+      <button ion-item (click)= "openPersonalinfoPage()">
+        Personal Info
+      </button>
 
+     
 
-      <div padding>
+<div padding>
         <button ion-button color = danger block (click)= "showAlert()">LOGOUT</button>
       </div>
 
