@@ -7,7 +7,17 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <header-menu></header-menu>
+      <ion-list>
+     <button ion-item (click)= "openaboutPage()">About Page</button>
+     <ion-item>
+        <ion-label>Night Mode</ion-label>
+        <ion-toggle [(ngModel)]="night-mode" disabled="false"></ion-toggle>
+      </ion-item>
+
+
+      <button ion-button color = danger block (click)= "showAlert()">LOGOUT</button>
+
+      </ion-list>
     </ion-content>
-  </ion-menu>
-  <ion-nav [root]="rootPage" #content></ion-nav>
+  </ion-menu> 
+  <ion-nav [root]="rootPage" [class]="selectedTheme"></ion-nav>

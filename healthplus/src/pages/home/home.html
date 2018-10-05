@@ -7,8 +7,8 @@
         </button>
       </ion-buttons>
     
-      <ion-title>
-        Home
+      <ion-title class ="logo">
+        <img alt = "logo" height= "40" src = "assets/imgs/healthplusblue.png">
       </ion-title>
       
     </ion-navbar>
@@ -21,6 +21,9 @@
 
 <ion-content>
   <h4 text-center> LOGIN </h4>
+ <!-- <button ion-button full icon-left (click)="toggleAppTheme()">
+      <ion-icon  name="bulb"></ion-icon>Toggle Theme
+    </button> -->
   <ion-list>
 
     <ion-item>
@@ -35,7 +38,9 @@
   
   </ion-list>
 
-  <button ion-button block (click)= "showAlert()">LOGIN</button>
+  <div padding>
+      <button ion-button block (click)= "showAlert()">LOGIN</button>
+    </div>
   
 
 </ion-content>

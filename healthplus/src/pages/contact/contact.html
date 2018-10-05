@@ -3,11 +3,7 @@
     <ion-title>
       Settings
     </ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only >
-        <ion-icon name='home'></ion-icon>
-      </button>
-      
+    <ion-buttons >
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -29,17 +25,21 @@
 
     
 
-        <ion-item>
-            <ion-label>Night Mode</ion-label>
-            <ion-toggle [(ngModel)]="night-mode" disabled="false"></ion-toggle>
-          </ion-item>
+        
 
       <button ion-item (click)= "openPersonalinfoPage()">
         Personal Info
       </button>
-
+      <button ion-item (click)= "openaboutPage()">
+        About Page
+      </button>
      
-
+     <div padding>
+<button ion-button full icon-left (click)="toggleAppTheme()">
+            <ion-icon  name="bulb"></ion-icon>Toggle Theme
+          </button>
+        </div> 
+        
 <div padding>
         <button ion-button color = danger block (click)= "showAlert()">LOGOUT</button>
       </div>

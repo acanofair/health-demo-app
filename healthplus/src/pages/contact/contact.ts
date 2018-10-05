@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController, NavParams} from 'ionic-angular';
 import { PersonalinfoPage } from '../personalinfo/personalinfo';
+import { AboutPage } from '../about/about';
+import { HomePage } from '../home/home';
+import { SettingsProvider } from './../../providers/settings/settings';
 
 
 
@@ -9,8 +12,10 @@ import { PersonalinfoPage } from '../personalinfo/personalinfo';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  selectedTheme: String;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public navParams: NavParams,private settings: SettingsProvider) {
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
 
   }
 
@@ -23,7 +28,24 @@ export class ContactPage {
     alert.present();
   }
 
+  toggleAppTheme() {
+    if (this.selectedTheme === 'dark-theme') {
+      this.settings.setActiveTheme('light-theme');
+    } else {
+      this.settings.setActiveTheme('dark-theme');
+    }
+  } 
+
   openPersonalinfoPage(){
     this.navCtrl.push(PersonalinfoPage)
+ }
+ openaboutPage(){
+    this.navCtrl.push(AboutPage)
+  }
+  openHomePage(){
+    this.navCtrl.push(HomePage)
   }
 }
+
+
+  
