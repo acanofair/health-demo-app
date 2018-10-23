@@ -4,6 +4,7 @@ import { PersonalinfoPage } from '../personalinfo/personalinfo';
 import { AboutInfoPage } from '../about-info/about-info';
 import { HomePage } from '../home/home';
 import { SettingsProvider } from './../../providers/settings/settings';
+import { WelcomePage } from '../welcome/welcome';
 
 
 
@@ -19,13 +20,14 @@ export class ContactPage {
 
   }
 
-  showAlert() {
-    let alert = this.alertCtrl.create({
+  logout() {
+    let logout = this.alertCtrl.create({
       title: 'You have logged out!',
       subTitle: 'Goodbye',
       buttons: ['OK']
     });
-    alert.present();
+    logout.present();
+    this.navCtrl.push(WelcomePage);
   }
 
   toggleAppTheme() {
@@ -45,6 +47,8 @@ export class ContactPage {
   openHomePage(){
     this.navCtrl.push(HomePage)
   }
+
+  
 }
 
 

@@ -15,6 +15,9 @@ import { LegWorkoutsPage } from '../pages/leg-workouts/leg-workouts';
 import { ArmWorkoutsPage } from '../pages/arm-workouts/arm-workouts';
 import { AboutInfoPage } from '../pages/about-info/about-info';
 import { CalendarModule } from 'ionic3-calendar-en';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,6 +37,9 @@ import { SettingsProvider } from '../providers/settings/settings';
     LegWorkoutsPage,
     ArmWorkoutsPage,
     AboutInfoPage,
+    WelcomePage,
+    LoginPage,
+    SignupPage,
     HeaderMenuComponent
   ],
   imports: [
@@ -53,6 +59,9 @@ import { SettingsProvider } from '../providers/settings/settings';
     LegWorkoutsPage,
     ArmWorkoutsPage,
     AboutInfoPage,
+    WelcomePage,
+    LoginPage,
+    SignupPage,
     TabsPage
   ],
   providers: [
