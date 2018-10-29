@@ -1,0 +1,36 @@
+page-start {
+  .toolbar-background {
+    background: transparent;
+    border-color: transparent;
+  }
+  
+
+
+  #start{
+      background: color($colors, lightprimary);
+      h1{
+          font-size:50px;
+          margin-top:50px;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+      }
+      .marginTop{
+          margin-top:150px;
+      }
+      .slide-image {
+        max-height: 40%;
+        max-width: 90%;
+        margin: 36px 0;
+      }
+
+      .logo{
+          height:100px;
+      }
+      
+  } 
+}
+  

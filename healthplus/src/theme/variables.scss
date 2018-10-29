@@ -42,8 +42,9 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  lightprimary:     #51a7c4,
-  gold: rgba(255, 217, 0, 0.856)
+  lightprimary:     #bdbdbd,
+  gold: rgba(255, 217, 0, 0.856),
+  logocolor:#345B6C
 
 );
 $toolbar-background: color($colors, primary);
@@ -91,5 +92,22 @@ $toolbar-background: color($colors, primary);
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
+
+
+  @font-face {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/righteous.woff2');
+  }
+  $font-family-base: "Righteous";
+  body{
+    font-family: "Righteous" !important;
+    font-weight:400 !important;
+  }
+  h1{
+    font-family: "Righteous" !important;
+  }

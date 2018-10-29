@@ -2,6 +2,7 @@ page-welcome {
 #welcome{
     background: color($colors, lightprimary);
     h1{
+        color : #345B6C;
         font-size:50px;
         margin-top:50px;
         height: 100%;
@@ -9,7 +10,7 @@ page-welcome {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+         
     }
     .marginTop{
         margin-top:150px;
@@ -18,5 +19,7 @@ page-welcome {
         height:100px;
     }
     
-}
+      
+    
+    }   
 }

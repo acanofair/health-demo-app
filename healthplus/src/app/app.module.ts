@@ -18,6 +18,7 @@ import { CalendarModule } from 'ionic3-calendar-en';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { StartPage } from '../pages/start/start';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -40,6 +41,7 @@ import { SettingsProvider } from '../providers/settings/settings';
     WelcomePage,
     LoginPage,
     SignupPage,
+    StartPage,
     HeaderMenuComponent
   ],
   imports: [
@@ -62,6 +64,7 @@ import { SettingsProvider } from '../providers/settings/settings';
     WelcomePage,
     LoginPage,
     SignupPage,
+    StartPage,
     TabsPage
   ],
   providers: [
