@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AboutPage } from '../../pages/about/about';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 
 /**
  * Generated class for the HeaderMenuComponent component.
@@ -17,6 +20,11 @@ export class HeaderMenuComponent {
   constructor() {
     console.log('Hello HeaderMenuComponent Component');
     this.text = 'Hello World';
-  }
+  } 
+  //constructor(public navCtrl: NavController, public navParams: NavParams) {
+  //}
+  //openAboutPage(){
+    //this.navCtrl.push(AboutPage)
+  //}
 
 }

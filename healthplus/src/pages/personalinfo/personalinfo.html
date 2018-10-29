@@ -1,5 +1,6 @@
 <!--
   Generated template for the PersonalinfoPage page.
+
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
@@ -13,21 +14,53 @@
 
 
 <ion-content padding>
-
+ 
+  <ion-list>
+    
   <ion-item>
-    <ion-label>Gender</ion-label>
+    <ion-label fixed >Gender</ion-label>
     <ion-select [(ngModel)]="gender">
       <ion-option value="f">Female</ion-option>
       <ion-option value="m">Male</ion-option>
     </ion-select>
   </ion-item>
 
-  <ion-item>
-    <ion-label>Weight</ion-label>
-    <ion-select [(ngModel)]="weight">
-      <ion-option value="100">100</ion-option>
-      <ion-option value="200">200</ion-option>
-    </ion-select>
-  </ion-item>
+ 
+
+
+      <ion-item>
+        <ion-label color="primary" stacked> Weight </ion-label> 
+        <ion-input type= "number"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label>Height</ion-label>
+          <ion-select [(ngModel)]="feet">
+            <ion-option value="04">4'</ion-option>
+            <ion-option value="05">5'</ion-option>
+            <ion-option value="06">6'</ion-option>
+            <ion-option value="07" checked="true">7'</ion-option>
+            
+          </ion-select>
+          <ion-select [(ngModel)]="inches">
+            <ion-option>0</ion-option>
+            <ion-option>1</ion-option>
+            <ion-option>2</ion-option>
+            <ion-option>3</ion-option>
+            <ion-option>4</ion-option>
+            <ion-option checked="true">5</ion-option>
+            <ion-option>6</ion-option>
+            <ion-option>7</ion-option>
+            <ion-option>8</ion-option>
+            <ion-option>9</ion-option>
+            <ion-option>10</ion-option>
+            <ion-option>11</ion-option>
+
+          </ion-select>
+        </ion-item>
+
+</ion-list>
+
 
 </ion-content>
