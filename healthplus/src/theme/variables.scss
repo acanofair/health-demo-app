@@ -91,5 +91,20 @@ $toolbar-background: color($colors, primary);
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+// @import "roboto";
+// @import "noto-sans";
+
+  @font-face {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/righteous.woff2');
+  }
+  $font-family-base: "Righteous";
+  body{
+    font-family: "Righteous" !important;
+    font-weight:400 !important;
+  }
+  h1{
+    font-family: "Righteous" !important;
+  }

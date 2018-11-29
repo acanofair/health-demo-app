@@ -43,6 +43,8 @@ export class LoginPage {
     }
   }
 
+  
+
     showAlert() {
   let alert = this.alertCtrl.create({
     title: 'Password Reset Email Sent',
@@ -53,7 +55,13 @@ export class LoginPage {
 }
 
 
-  // register(){
-  //  this.navCtrl.push(TabsPage)
-  // }
+
+reset(email){
+this.aFAuth.auth.sendPasswordResetEmail(email).then(function() {
+  console.log("Correct");
+}).catch(function(error) {
+  // An error happened.
+});
+
+}
 }
