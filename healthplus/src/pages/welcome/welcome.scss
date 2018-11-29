@@ -2,7 +2,7 @@ page-welcome {
 #welcome{
     background: color($colors, lightprimary);
     h1{
-        color : #345B6C;
+        color : rgb(0, 0, 0);
         font-size:50px;
         margin-top:50px;
         height: 100%;
@@ -18,8 +18,6 @@ page-welcome {
     .logo{
         height:100px;
     }
-    
-      
     
     }   
 }

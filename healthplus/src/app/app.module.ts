@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -19,11 +20,25 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { StartPage } from '../pages/start/start';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
+import {AngularFireAuthModule } from "angularfire2/auth";
+import {FIREBASE_CONFIG} from './app.firebase.config'; 
+import {AngularFireModule} from 'angularfire2';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SettingsProvider } from '../providers/settings/settings';
+
+var config = {
+  apiKey: "AIzaSyCMmYv3WX0VYdwevdnlrmj2vP5VgSl6400",
+  authDomain: "mobile-app-project-38add.firebaseapp.com",
+  databaseURL: "https://mobile-app-project-38add.firebaseio.com",
+  projectId: "mobile-app-project-38add",
+  storageBucket: "mobile-app-project-38add.appspot.com",
+  messagingSenderId: "200536791321"
+
+}
 
 @NgModule({
   declarations: [
@@ -46,8 +61,13 @@ import { SettingsProvider } from '../providers/settings/settings';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     CalendarModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,7 +91,8 @@ import { SettingsProvider } from '../providers/settings/settings';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SettingsProvider
+    SettingsProvider,
+    AngularFireAuthModule
   ]
 })
 export class AppModule {}

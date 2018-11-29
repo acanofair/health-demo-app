@@ -2,12 +2,7 @@
     <ion-navbar>
        <ion-title class ="logo">
         <img alt = "logo" height="40" src ="assets/imgs/healthplusblue.png">
-      </ion-title>
-      <ion-buttons right>
-        <button ion-button icon-only >
-          <ion-icon name='home'></ion-icon>
-        </button>
-      </ion-buttons>
+       </ion-title>
     </ion-navbar>
   </ion-header>
 
@@ -15,17 +10,7 @@
 <ion-content>
    
   <ion-list>
-      <ion-item>
-           <ion-range [(ngModel)]="brightness" color= "primary" pin="true">
-            <ion-icon range-left small name="sunny"></ion-icon>
-            <ion-icon range-right name="sunny"></ion-icon>
-          </ion-range>
-        </ion-item>
-
     
-
-        
-
       <button ion-item (click)= "openPersonalinfoPage()">
         Personal Info
       </button>

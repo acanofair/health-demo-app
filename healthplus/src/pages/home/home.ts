@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, ToastController } from 'ionic-angular';
 import { SettingsProvider } from './../../providers/settings/settings';
-
+import {AngularFireAuth} from "angularfire2/auth";
 
 
 @Component({
@@ -11,8 +11,28 @@ import { SettingsProvider } from './../../providers/settings/settings';
 export class HomePage {
     selectedTheme: String;
     
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private settings: SettingsProvider) {
+  constructor(private aFAuth: AngularFireAuth, private toast: ToastController,
+    public navCtrl: NavController, public alertCtrl: AlertController, private settings: SettingsProvider) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+  }
+
+  ionViewWillLoad(){
+    this.aFAuth.authState.subscribe(data =>{ 
+      if(data.email && data.uid){
+      this.toast.create({
+        message:'Welcome to Healthplus',
+        duration: 2000
+      }).present();
+    }
+    else{
+   this.toast.create({
+        message:'Could not find user',
+        duration: 2000
+      }).present();
+    }
+    });
+
+
   }
 
     toggleAppTheme() {
