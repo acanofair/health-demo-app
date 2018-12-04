@@ -1,5 +1,7 @@
 export interface PInfo{
-	uGender: boolean;
-	uWeight: number;
-	uHeight: boolean;
+	uGender: string;
+	uWeight: string;
+	uFeet: string;
+	uInches:string;
+	status:boolean
 }

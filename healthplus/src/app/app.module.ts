@@ -21,7 +21,6 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { StartPage } from '../pages/start/start';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AngularFireAuthModule } from "angularfire2/auth";
 import {FIREBASE_CONFIG} from './app.firebase.config'; 

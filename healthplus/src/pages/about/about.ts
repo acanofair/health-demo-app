@@ -1,42 +1,55 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { NavController, AlertController} from 'ionic-angular';
+import { AngularFireDatabase} from 'angularfire2/database';
 import {MealChoice} from '../../models/meallog/mealLog.interface';
-import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
+
+  items;
+  meal = {} as MealChoice
   currentDate;
   formattedDate;
-  arrData=[]
-  // mealchoice
-   meal = {} as MealChoice
-   //private mealListRef = this.fdb.list<MealChoice>('meal');
+  
+  
+  
 
-    mealListRef$: Observable<any[]>;
-  items;
-  dataToAdd;
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController, public fdb: AngularFireDatabase) {
-   this.getDataFromFireBase();
+   //meal = {} as MealChoice
+
    
+
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController, public fdb: AngularFireDatabase) {
     this.currentDate = new Date();
     this.getFormattedDate();
 
+    this.getDataFromFireBase();
+
   }
- 
-getDataFromFireBase(){
-  this.fdb.list('meal/').valueChanges().subscribe(
-      data=>{
+  getDataFromFireBase(){
+    this.fdb.list('Meals/').valueChanges().subscribe(
+      data => {
         console.log(data)
-        this.items =data
+        this.items = data
       }
-  ) 
-}
-addData(){
-  this.fdb.list('meal/').push(this.dataToAdd)
-}
+    )
+  }
+
+  addData(){
+    this.fdb.list('Meals/').push(this.meal)
+  }
+  /*
+  addData1(){
+    this.fdb.list('Meals/').push(this.meal.mealContents)
+  }
+  addData2(){
+    this.fdb.list('Meals/').push(this.meal.mealCal)
+  }  */
+ 
+  //https://www.youtube.com/watch?v=f5mW8piE1Go
+  
 getFormattedDate(){
   var dateObj = new Date()
 
@@ -57,3 +70,4 @@ getFormattedDate(){
 }
 
 }
+

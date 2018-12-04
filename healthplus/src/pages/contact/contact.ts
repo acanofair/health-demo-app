@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, AlertController, NavParams} from 'ionic-angular';
+import { IonicPage, NavController, AlertController, NavParams, App} from 'ionic-angular';
 import { PersonalinfoPage } from '../personalinfo/personalinfo';
 import { AboutInfoPage } from '../about-info/about-info';
 import { HomePage } from '../home/home';
@@ -15,7 +15,7 @@ import { WelcomePage } from '../welcome/welcome';
 export class ContactPage {
   selectedTheme: String;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public navParams: NavParams,private settings: SettingsProvider) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,public navParams: NavParams,private settings: SettingsProvider,private app:App) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
 
   }
@@ -27,7 +27,8 @@ export class ContactPage {
       buttons: ['OK']
     });
     logout.present();
-    this.navCtrl.push(WelcomePage);
+    const root = this.app.getRootNav();
+    root.popToRoot();
   }
 
   toggleAppTheme() {

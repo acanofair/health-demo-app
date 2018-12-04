@@ -51,11 +51,15 @@ export class LoginPage {
   });
   alert.present();
 }
-homepage(){
-  this.navCtrl.push(TabsPage);
-}
 
-  // register(){
+
+reset(email){
+  this.aFAuth.auth.sendPasswordResetEmail(email).then(function() {
+    console.log("Correct");
+  }).catch(function(error) {
+    // An error happened.
+  });  // register(){
   //  this.navCtrl.push(TabsPage)
   // }
+      }
 }

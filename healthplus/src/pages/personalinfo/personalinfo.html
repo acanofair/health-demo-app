@@ -18,8 +18,8 @@
   <ion-list>
     
   <ion-item>
-    <ion-label fixed >Gender</ion-label>
-    <ion-select [(ngModel)]="gender">
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="user.uGender">
       <ion-option value="f">Female</ion-option>
       <ion-option value="m">Male</ion-option>
     </ion-select>
@@ -29,21 +29,21 @@
 
 
       <ion-item>
-        <ion-label color="primary" stacked> Weight </ion-label> 
-        <ion-input type= "number"></ion-input>
+        <ion-label> Weight </ion-label> 
+        <ion-input [(ngModel)]= "user.uWeight" type= "number"></ion-input>
       </ion-item>
 
 
       <ion-item>
           <ion-label>Height</ion-label>
-          <ion-select [(ngModel)]="feet">
+          <ion-select [(ngModel)]="user.uFeet">
             <ion-option value="04">4'</ion-option>
             <ion-option value="05">5'</ion-option>
             <ion-option value="06">6'</ion-option>
             <ion-option value="07" checked="true">7'</ion-option>
             
           </ion-select>
-          <ion-select [(ngModel)]="inches">
+          <ion-select [(ngModel)]="user.uInches">
             <ion-option>0</ion-option>
             <ion-option>1</ion-option>
             <ion-option>2</ion-option>
@@ -59,8 +59,14 @@
 
           </ion-select>
         </ion-item>
+        </ion-list>
 
-</ion-list>
-
+        <button ion-button (click)= "addUser()" >Submit your Info</button>
+       <ion-item *ngFor="let item of items">
+          <h3> Gender: {{info.uGender}} </h3> 
+          <h3> Weight: {{info.uWeight}}</h3> 
+          <h3> Height: {{info.uFeet}}{{info.uInches}} </h3>
+          
+        </ion-item>
 
 </ion-content>

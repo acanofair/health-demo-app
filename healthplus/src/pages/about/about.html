@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -6,65 +5,36 @@
         <img alt = "logo" height="40" src="assets/imgs/healthplusblue.png">
       </div>
     </ion-title>
+  
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-  <ion-item>
-    <ion-label>Meal Type</ion-label>
-    <ion-input [(ngModel)= "dataToAdd"></ion-input>
-  </ion-item>
-  <button ion-button (click)="addData()">Add</button>
-  <ion-item *ngFor="let item of items">
-    {{item}}
-  </ion-item>
-</ion-content>
+    <ion-label>
+        {{formattedDate}}
+      </ion-label>
+     
+        <ion-item>
+          <ion-label color="primary" stacked>Meal Type</ion-label>
+          <ion-input [(ngModel)] = "meal.mealType" placeholder="Enter type of meal"></ion-input>
+        </ion-item>
+      
+         <ion-item>
+        <ion-label color="primary" stacked> Meal Items </ion-label>
+        <ion-input [(ngModel)] = "meal.mealContents" type="text" placeholder="Enter contents of meal"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label color="primary" stacked>Total Calories</ion-label>
+        <ion-input [(ngModel)] = "meal.mealCal" type="number" placeholder="Calorie Input"></ion-input>
+      </ion-item> 
+    
 
-
- <!-- <ion-list>
-    <ion-item *ngFor="let item of mealListRef">
-      <h2>Meal Type: {{item.mealType}} </h2>
-      <h2>Meal Contents: {{item.mealontents}} </h2>
-      <h2>Meal Calories: {{item.mealCalories}} </h2> 
-    </ion-item>
-   </ion-list> -->
-
-
-<!--
-<ion-label>
-  {{formattedDate}}
-</ion-label>
-<h1>
-  <ion-item>
-    <ion-label color="primary" stacked>Meal Type</ion-label>
-    <ion-input [(ngModel)] = "meal.mealType" type="text" placeholder="Enter nature of meal"></ion-input>
-           <ion-select [(ngModel)] ="meal.mealType">
-      <ion-option value = "b">Breakfast</ion-option>
-      <ion-option value = "l">Lunch</ion-option>
-      <ion-option value = "d">Dinner</ion-option>
-      <ion-option value = "o">Other(Snack)</ion-option>
-    </ion-select> 
-  </ion-item>
-</h1>
-<h2>
-   <ion-item>
-  <ion-label color="primary" stacked>Meal Items</ion-label>
-  <ion-input [(ngModel)] = "meal.mealContents" type="text" placeholder="Enter contents of meal"></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label color="primary" stacked>Total Calories</ion-label>
-  <ion-input [(ngModel)] = "meal.mealCal" type="number" placeholder="Calorie Input"></ion-input>
-</ion-item>
-
-  <button ion-button (click)= "addMeal(meal)">Submit Meal</button>
-</h2>
-
-     <ion-list>
-  <ion-item *ngFor="let item of mealListRef">
-    <h3> Meal Type: {{item.mealType}} </h3>
-    <h4> Meal Contents: {{item.mealContents}} </h4>
-    <h5> Meal Contents: {{item.mealCal}} </h5>
-  </ion-item>
-</ion-list> -->
+        <button ion-button (click)= "addData()" >Submit Meal</button>
+       <ion-item *ngFor="let item of items">
+          <h3> Meal Type: {{meal.mealType}} </h3> 
+          <h3> Meal Contents: {{meal.mealContents}}</h3> 
+          <h3> Meal Calories: {{meal.mealCal}} </h3>
+          
+        </ion-item>
+  </ion-content>
